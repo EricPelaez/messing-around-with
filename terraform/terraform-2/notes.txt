@@ -1,0 +1,2 @@
+here I made a ec2 instance
+learn that you can target a specifc resourse wheit useful for uddaint or delting
