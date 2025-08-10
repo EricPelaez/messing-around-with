@@ -1,0 +1,3 @@
+now this is what I'm talking  about 
+I modifed it by addin gsome depends on, I though it was autmitc but guess not
+here the git hub rep where I followed along https://github.com/mathesh-me/static-website-hosting-1
