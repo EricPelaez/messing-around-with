@@ -1,0 +1,2 @@
+I;m starting to notice a pattern with all sthes new to terraform vidoes , vpc an inxtance and securty group
+does a solid job of whats what in terraform
