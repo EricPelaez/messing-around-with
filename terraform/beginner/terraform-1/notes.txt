@@ -1,1 +1,0 @@
-here I'm juts makeing an bucket using terraform super simpledir
