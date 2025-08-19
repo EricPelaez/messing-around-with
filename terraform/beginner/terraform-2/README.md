@@ -2,7 +2,7 @@ Terraform AWS EC2 Instances (Ubuntu)
 
 This project provisions two Ubuntu-based Amazon EC2 instances using Terraform. It demonstrates my work in deploying compute resources in AWS with Infrastructure-as-Code.
 
-Adapted from the YouTube tutorial "Terraform Tutorial on AWS - Getting Started".
+Adapted from the YouTube tutorial https://www.youtube.com/watch?v=Qfg6hRY4Tq0&list=WL&index=2
 
 Features
 
