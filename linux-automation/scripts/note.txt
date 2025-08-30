@@ -1,0 +1,11 @@
+Launch an Amazon Linux 2 EC2 instance
+
+Once you launch an EC2 instance and run this script, you will have:
+
+An updated Linux system.
+
+Nginx installed and running.
+
+Firewall configured so port 80 is open.
+
+A fully working web server that you can visit in your browser.
