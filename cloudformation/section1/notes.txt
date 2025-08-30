@@ -1,0 +1,7 @@
+make sure templet is upade to an s3 bucket
+
+you need an templte to make an stack
+
+make sure the bucket and stack are in the same reigon 
+
+this template makes an sqs and ansns topic
