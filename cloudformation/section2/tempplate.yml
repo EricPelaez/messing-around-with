@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Tempolate for Section 2"
+Resources:
+  WebServerInstanceEP:
+    Type: AWS::EC2::Instance
+    Properties:
+        ImageId: ami-00ca32bbc84273381
+        InstanceType: t2.micro
+        SubnetId: subnet-075186001f5ed375e
+        Tags:
+          - Key: Name
+            Value: WebServerInstanceEPFromTemplate
+          - Key: Project
+            Value: AWS CLoud Formation
