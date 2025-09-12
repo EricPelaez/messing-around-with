@@ -7,8 +7,21 @@ Resources:
         ImageId: ami-00ca32bbc84273381
         InstanceType: t2.micro
         SubnetId: subnet-075186001f5ed375e
+        SecurityGroupIds:
+          - Ref: WebServerSecurityGroup
         Tags:
           - Key: Name
             Value: WebServerInstanceEPFromTemplate
           - Key: Project
             Value: AWS CLoud Formation
+
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for web server instance
+      VpcId: vpc-0727d4c2cf510e13e
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: '0.0.0.0/0'

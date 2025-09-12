@@ -1,0 +1,10 @@
+made a templae from scrat
+thers a website that has a  the reaiurces for aws its prtty cool
+https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-template-resource-type-ref.html
+
+
+jhjhkk
+
+
+
+
