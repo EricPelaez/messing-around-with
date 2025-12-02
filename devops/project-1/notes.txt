@@ -1,0 +1,115 @@
+I think we have to make a ec2 instnce with ubuntu 
+in the video it said it already copried the docker image into the server lets do that
+ I made a key pair
+
+
+
+
+✅ 1. Connect to your EC2 instance
+ssh -i your-key.pem ubuntu@your-ec2-public-ip
+
+✅ 2. Install Docker (correct, clean process)
+
+Run these commands exactly:
+
+Remove old Docker versions
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+Update system
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+
+Add Docker’s GPG key
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+Add Docker repository
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+Install Docker engine & CLI
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+✅ 3. Test Docker
+sudo docker run hello-world
+
+
+You should see:
+"Hello from Docker!"
+
+✅ 4. Allow Docker to run without sudo
+sudo usermod -aG docker ubuntu
+
+VERY IMPORTANT
+
+Log out and back in:
+
+exit
+# reconnect
+ssh -i your-key.pem ubuntu@your-ec2-public-ip
+
+
+Test:
+
+docker ps
+
+
+If no error → you're good.
+
+✅ 5. Create your project folder
+
+Inside EC2:
+
+mkdir app
+cd app
+
+
+Upload your index.html, css, images, etc.
+(You can SCP them from your PC — let me know if you want the commands.)
+
+✅ 6. Create your Dockerfile
+
+Create this file:
+
+nano Dockerfile
+
+
+Paste this:
+
+FROM nginx:latest
+COPY . /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+
+Save → CTRL+O, ENTER, CTRL+X
+
+This means:
+
+Use nginx as base
+
+Copy your static files into nginx folder
+
+Expose port 80
+
+Start nginx
+
+✅ 7. Build the Docker image
+
+Run:
+
+docker build -t my-static-app .
+
+✅ 8. Run the container
+docker run -d -p 80:80 my-static-app
+
+
+Now visit your EC2 public IP in the browser:
+
+http://your-ec2-public-ip
+
+
+You should see your website.
