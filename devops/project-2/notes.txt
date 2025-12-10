@@ -1,0 +1,37 @@
+to start thios project 
+amde a ex2 inacte ubuntu t2.medium
+asloo mad a rds datbase mysql its also t3.micro
+
+connet to the instnece
+
+install jenkins liux long term release
+
+
+start kenins
+
+added an indoung rule to the secuirt group attahc to the instnce
+
+go to instace pucbilic id : 8080
+
+did some stukk to gte the admin password
+
+click install suggested plugins
+
+after that install docker into the instance
+
+make an docker user for jenkins 
+
+and lout out
+
+
+jenkins 
+http://98.81.112.80:8080/
+
+
+ok so go to mangae kenkins
+
+plugins
+
+avaible plugins
+
+dopwnlaod the docker piepline, sonarqube scanner, and pipeline stage view
