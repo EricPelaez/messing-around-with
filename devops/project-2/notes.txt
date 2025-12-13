@@ -28,6 +28,9 @@ jenkins
 http://98.81.112.80:8080/
 
 
+
+third video
+
 ok so go to mangae kenkins
 
 plugins
@@ -35,3 +38,80 @@ plugins
 avaible plugins
 
 dopwnlaod the docker piepline, sonarqube scanner, and pipeline stage view
+
+\\\\\\
+make a sonarcloud accout
+
+anaylse new project, manually
+
+name it 
+
+puclic, previous version
+
+manually
+
+click the other optiion
+
+copy the command should look like l\this 
+
+sonar-scanner \
+  -Dsonar.organization=ericpelaez \
+  -Dsonar.projectKey=ericpelaez_ci-jenkins-2
+
+  syou should also cpoy the the value of the envir ment var
+  125a2bfd1258ef5794892119f5f5c33ae14295bf
+
+  and we have to store it into jenkins
+
+  go to manga jenkins
+
+  creditials
+
+  add credtails
+
+  the kind is secret text
+
+
+  //foruth vidoe
+
+  ok after that go to mange jenkins 
+  system
+
+  go to sonar qube server and check enviorment var
+
+  add sonar qube
+
+  name sonarcloud
+
+  link https//sonarcloud.io
+
+  click sonar-token
+
+  and save
+
+  after that go to mange jenins
+
+  got ot tools
+  add aonrqube scanner installionatuois
+
+  name it sonar-scanner 
+  choose a recent verions
+
+  and svae 
+
+  after that got to manage jennkuins 
+
+  creditials
+
+  system
+  global creditials
+
+  add creditails
+
+  id and description is going to be docker-cred
+  the username shoudl be docker image username. trets it as sectre
+
+
+  ok after that add new item in jenlins
+
+  name it ci jenins and choos epipleine
